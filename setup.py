@@ -12,6 +12,7 @@ setup(
     version=posts.__version__,
     description='A generic posts app for django',
     long_description=read('README.md'),
+    license='BSD',
     author='noxan',
     author_email='noxan@redmoonstudios.de',
     url='https://github.com/noxan/django-posts',
