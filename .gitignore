@@ -6,4 +6,5 @@ local_settings.py
 /env/
 /build/
 /dist/
-/django_posts.egg-info/
+*.egg-info
+*.egg
