@@ -1,0 +1,7 @@
+{% block content %}
+<div>
+    <h1>{{post.headline}}</h1>
+    <small><a href="mailto:{{post.author.email}}">{{post.author}}</a> {{post.creation_date}}</small>
+    {{post.text|linebreaks}}
+</div>
+{% endblock %}
