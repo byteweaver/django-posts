@@ -8,5 +8,5 @@ def read(fname):
 setup(
     name='django-posts',
     description='A generic posts app for django',
-    long_description='',
+    long_description=read('README.md'),
 )
