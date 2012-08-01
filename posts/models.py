@@ -8,6 +8,9 @@ class Post(models.Model):
     text = models.TextField()
     creation_date = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['-creation_date']
+
     def __unicode__(self):
         return self.headline
 
