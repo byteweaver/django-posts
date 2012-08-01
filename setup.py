@@ -14,4 +14,6 @@ setup(
     long_description=read('README.md'),
     author='noxan',
     author_email='noxan@redmoonstudios.de',
+    packages=find_packages(),
+    include_package_data=True,
 )
