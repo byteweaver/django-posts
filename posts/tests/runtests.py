@@ -35,6 +35,8 @@ if not settings.configured:
         TEMPLATE_DIRS = (
             os.path.join(os.path.dirname(__file__), '../templates'),
         ),
+        COVERAGE_MODULE_EXCLUDES = EXTERNAL_APPS,
+        COVERAGE_REPORT_HTML_OUTPUT_DIR=os.path.join(os.path.dirname(__file__), 'coverage')
     )
 
 
