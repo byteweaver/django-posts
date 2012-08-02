@@ -32,6 +32,7 @@ if not settings.configured:
             }
         },
         INSTALLED_APPS = EXTERNAL_APPS + INTERNAL_APPS,
+        ROOT_URLCONF='posts.tests.urls',
         TEMPLATE_DIRS = (
             os.path.join(os.path.dirname(__file__), '../templates'),
         ),
