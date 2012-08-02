@@ -1,4 +1,5 @@
 django>=1.4.1
+factory_boy
 django-nose
 coverage
 django-coverage
