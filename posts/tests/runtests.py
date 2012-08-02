@@ -1,7 +1,21 @@
 import sys
 
+from django.conf import settings
+
 from django_coverage.coverage_runner import CoverageRunner
 from django_nose import NoseTestSuiteRunner
+
+
+if not settings.configured:
+    settings.configure(
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': ':memory:',
+            }
+        },
+    )
+
 
 
 class NoseCoverageTestRunner(CoverageRunner, NoseTestSuiteRunner):
