@@ -1,3 +1,4 @@
+import os
 import sys
 
 from django.conf import settings
@@ -31,6 +32,9 @@ if not settings.configured:
             }
         },
         INSTALLED_APPS = EXTERNAL_APPS + INTERNAL_APPS,
+        TEMPLATE_DIRS = (
+            os.path.join(os.path.dirname(__file__), '../templates'),
+        ),
     )
 
 
