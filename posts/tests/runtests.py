@@ -3,9 +3,6 @@ import sys
 
 from django.conf import settings
 
-from django_coverage.coverage_runner import CoverageRunner
-from django_nose import NoseTestSuiteRunner
-
 
 EXTERNAL_APPS = [
     'django.contrib.admin',
@@ -39,6 +36,9 @@ if not settings.configured:
         COVERAGE_REPORT_HTML_OUTPUT_DIR=os.path.join(os.path.dirname(__file__), 'coverage')
     )
 
+
+from django_coverage.coverage_runner import CoverageRunner
+from django_nose import NoseTestSuiteRunner
 
 class NoseCoverageTestRunner(CoverageRunner, NoseTestSuiteRunner):
     pass
