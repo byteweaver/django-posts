@@ -22,6 +22,7 @@ setup(
         'Django',
     ],
     tests_require=[
+        'Django',
         'django-nose',
         'coverage',
         'django-coverage',
