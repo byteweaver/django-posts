@@ -6,6 +6,22 @@ from django_coverage.coverage_runner import CoverageRunner
 from django_nose import NoseTestSuiteRunner
 
 
+EXTERNAL_APPS = [
+    'django.contrib.admin',
+    'django.contrib.admindocs',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.messages',
+    'django.contrib.sessions',
+    'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
+    'django.contrib.sites',
+]
+INTERNAL_APPS = [
+    'django_nose',
+    'posts',
+]
+
 if not settings.configured:
     settings.configure(
         DATABASES = {
@@ -14,6 +30,7 @@ if not settings.configured:
                 'NAME': ':memory:',
             }
         },
+        INSTALLED_APPS = EXTERNAL_APPS + INTERNAL_APPS,
     )
 
 
