@@ -14,5 +14,9 @@ class PostListNode(template.Node):
 
 @register.tag
 def get_post_list(parser, token):
-    return PostListNode(3)
+    try:
+        tag_name, count_string = token.split_contents()
+    except ValueError:
+        raise template.TemplateSyntaxError("%r tag requires a single argument" % token.contents.split()[0])
+    return PostListNode(count_string)
 
