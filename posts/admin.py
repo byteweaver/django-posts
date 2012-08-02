@@ -5,6 +5,8 @@ from models import Post
 
 
 class PostAdmin(admin.ModelAdmin):
+    list_display = ('headline', 'author', 'creation_date')
+
     def save_model(self, request, obj, form, change):
         try:
             obj.author
