@@ -11,6 +11,7 @@ class PostListNode(template.Node):
 
     def render(self, context):
         context['post_list'] = Post.objects.all()[:self.count]
+        return u''
 
 @register.tag
 def get_post_list(parser, token):
