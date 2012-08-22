@@ -14,3 +14,9 @@ class Post(models.Model):
     def __unicode__(self):
         return self.headline
 
+class PositionPostMixin(models.Model):
+    position = models.IntegerField()
+
+    class Meta:
+        ordering = ['position']
+        abstract = True
