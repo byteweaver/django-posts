@@ -21,6 +21,13 @@ class PositionPostMixin(models.Model):
         ordering = ['position']
         abstract = True
 
+class LinkPostMixin(models.Model):
+    link_url = models.URLField()
+    link_name = models.CharField(max_length=255)
+
+    class Meta:
+        abstract = True
+
 class ImagePostMixin(models.Model):
     image = models.CharField(max_length=40)
 
