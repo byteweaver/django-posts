@@ -20,3 +20,9 @@ class PositionPostMixin(models.Model):
     class Meta:
         ordering = ['position']
         abstract = True
+
+class ImagePostMixin(models.Model):
+    image = models.CharField(max_length=40)
+
+    class Meta:
+        abstract = True
