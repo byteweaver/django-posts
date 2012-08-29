@@ -15,9 +15,18 @@ class AbstractPost(models.Model):
     def __unicode__(self):
         return self.headline
 
-
 class Post(AbstractPost):
     pass
+
+class VisibilityPostManagerMixin(models.Manager):
+    def get_visible(self):
+        return self.filter(visible=True)
+
+class VisibilityPostMixin(models.Model):
+    visible = models.BooleanField(default=True)
+
+    class Meta:
+        abstract = True
 
 class PositionPostMixin(models.Model):
     position = models.IntegerField()
