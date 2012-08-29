@@ -36,8 +36,8 @@ class PositionPostMixin(models.Model):
         abstract = True
 
 class LinkPostMixin(models.Model):
-    link_url = models.URLField()
-    link_name = models.CharField(max_length=255)
+    link_url = models.URLField(blank=True)
+    link_name = models.CharField(max_length=255, blank=True)
 
     class Meta:
         abstract = True
