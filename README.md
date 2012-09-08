@@ -3,12 +3,28 @@ django-posts
 
 django generic posts app
 
-## Download
+## Installation
 
-### using pip
+If you want to install the latest stable release from PyPi:
 
-  pip install django-posts
+    $ pip install django-posts
 	
-### github
+If you want to install the latest development version from GitHub:
 
-	https://github.com/byteweaver/django-posts
+    $ pip install -e git://github.com/byteweaver/django-posts#egg=django-posts
+
+Add `posts` to your `INSTALLED_APPS`:
+
+    INSTALLED_APPS = (
+        ...
+        'posts',
+        ...
+    )
+
+Hook this app into your ``urls.py``:
+
+    urlpatterns = patterns('',
+        ...
+        url(r'^your-url/$', include('posts.urls')),
+        ...
+    )
