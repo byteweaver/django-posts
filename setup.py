@@ -12,10 +12,10 @@ setup(
     version=posts.__version__,
     description='A generic posts app for django',
     long_description=read('README.md'),
-    license='BSD',
+    license=read('LICENSE'),
     author='noxan',
-    author_email='noxan@redmoonstudios.de',
-    url='https://github.com/noxan/django-posts',
+    author_email='contact@byteweaver.net',
+    url='https://github.com/byteweaver/django-posts',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
