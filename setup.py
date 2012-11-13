@@ -12,7 +12,7 @@ setup(
     version=posts.__version__,
     description='A generic posts app for django',
     long_description=read('README.md'),
-    license=read('LICENSE'),
+    license='MIT License',
     author='noxan',
     author_email='contact@byteweaver.net',
     url='https://github.com/byteweaver/django-posts',
