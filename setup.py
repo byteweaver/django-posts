@@ -10,12 +10,12 @@ def read(fname):
 setup(
     name='django-posts',
     version=posts.__version__,
-    description='A generic posts app for django (fork of the django-posts)',
+    description='A generic posts app for django',
     long_description=read('README.md'),
     license='MIT License',
-    author='Gilson Filho',
-    author_email='contato@gilsondev.com',
-    url='https://github.com/gilsondev/django-posts',
+    author='noxan',
+    author_email='contact@byteweaver.net',
+    url='https://github.com/byteweaver/django-posts',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
