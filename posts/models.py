@@ -18,6 +18,10 @@ class AbstractPost(models.Model):
 class Post(AbstractPost):
     slug = models.SlugField(max_length=150)
 
+    @models.permalink
+    def get_absolute_url(self):
+        return reverse('detail', args=[str(self.slug)])
+
 class VisibilityPostManagerMixin(models.Manager):
     def get_visible(self):
         return self.filter(visible=True)
