@@ -16,7 +16,7 @@ class AbstractPost(models.Model):
         return self.headline
 
 class Post(AbstractPost):
-    pass
+    slug = models.SlugField(max_length=150)
 
 class VisibilityPostManagerMixin(models.Manager):
     def get_visible(self):
