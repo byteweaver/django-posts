@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-06 16:46-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Gilson Filho <contato@gilsondev.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: pt-br\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: models.py:8
+msgid "Headline"
+msgstr "Título"
+
+#: models.py:9
+msgid "Text"
+msgstr "Conteúdo"
+
+#: models.py:10
+msgid "Creation Date"
+msgstr "Data de Criação"
+
+#: models.py:20
+msgid "Slug"
+msgstr "URL do Post"
+
+#: models.py:31
+msgid "Visible"
+msgstr "Visível"
+
+#: models.py:37
+msgid "Position"
+msgstr "Posição"
+
+#: models.py:44
+msgid "Link URL"
+msgstr "Endereço do Link"
+
+#: models.py:45
+msgid "Link Name"
+msgstr "Nome do Link"
+
+#: models.py:51
+msgid "Image"
+msgstr "Imagem"

@@ -1,3 +1,4 @@
 include LICENSE
 include README.md
 exclude *.pyc
+exclude example
