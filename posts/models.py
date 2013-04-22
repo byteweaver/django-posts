@@ -17,6 +17,7 @@ class AbstractPost(models.Model):
     def __unicode__(self):
         return self.headline
 
+
 class SlugPostMixin(models.Model):
     slug = models.SlugField(_("Slug"), max_length=150)
 
@@ -36,11 +37,13 @@ class VisibilityPostManagerMixin(models.Manager):
     def get_visible(self):
         return self.filter(visible=True)
 
+
 class VisibilityPostMixin(models.Model):
     visible = models.BooleanField(_("Visible"), default=True)
 
     class Meta:
         abstract = True
+
 
 class PositionPostMixin(models.Model):
     position = models.IntegerField(_("Position"))
@@ -49,12 +52,14 @@ class PositionPostMixin(models.Model):
         ordering = ['position']
         abstract = True
 
+
 class LinkPostMixin(models.Model):
     link_url = models.URLField(_("Link URL"), blank=True)
     link_name = models.CharField(_("Link Name"), max_length=255, blank=True)
 
     class Meta:
         abstract = True
+
 
 class ImagePostMixin(models.Model):
     image = models.CharField(_("Image"), max_length=40)
