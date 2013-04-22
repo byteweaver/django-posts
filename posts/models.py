@@ -16,12 +16,20 @@ class AbstractPost(models.Model):
     def __unicode__(self):
         return self.headline
 
-class Post(AbstractPost):
+class SlugPostMixin(models.Model):
     slug = models.SlugField(_("Slug"), max_length=150)
 
     @models.permalink
     def get_absolute_url(self):
         return reverse('detail', args=[str(self.slug)])
+
+    class Meta:
+        abstract = True
+
+
+class Post(AbstractPost, SlugPostMixin):
+    pass
+
 
 class VisibilityPostManagerMixin(models.Manager):
     def get_visible(self):

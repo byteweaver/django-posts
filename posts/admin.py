@@ -4,9 +4,8 @@ from django.contrib.auth.models import User
 from models import Post
 
 
-class PostAdmin(admin.ModelAdmin):
+class AbstractPostAdmin(admin.ModelAdmin):
     list_display = ('headline', 'author', 'creation_date')
-    prepopulated_fields = {"slug": ("headline",)}
 
     def save_model(self, request, obj, form, change):
         try:
@@ -14,5 +13,10 @@ class PostAdmin(admin.ModelAdmin):
         except User.DoesNotExist:
             obj.author = request.user
         obj.save()
+
+
+class PostAdmin(AbstractPostAdmin):
+    prepopulated_fields = {"slug": ("headline",)}
+
 
 admin.site.register(Post, PostAdmin)
