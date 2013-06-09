@@ -1,4 +1,4 @@
-django>=1.4.1
+django>=1.5.1
 django-nose
 coverage
 django-coverage
