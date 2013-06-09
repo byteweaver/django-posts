@@ -1,11 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 
 
 class AbstractPost(models.Model):
-    author = models.ForeignKey(User, editable=False, related_name = "%(app_label)s_%(class)s")
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, editable=False, related_name="%(app_label)s_%(class)s")
     headline = models.CharField(_("Headline"), max_length=255)
     text = models.TextField(_("Text"))
     creation_date = models.DateTimeField(_("Creation Date"), auto_now_add=True)
