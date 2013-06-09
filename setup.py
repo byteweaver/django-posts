@@ -20,7 +20,6 @@ setup(
     include_package_data=True,
     install_requires=[
         'Django',
-        'South',
     ],
     tests_require=[
         'Django',
