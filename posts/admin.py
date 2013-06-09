@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 
 from models import Post
 
@@ -10,7 +10,7 @@ class AbstractPostAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         try:
             obj.author
-        except User.DoesNotExist:
+        except get_user_model().DoesNotExist:
             obj.author = request.user
         obj.save()
 
