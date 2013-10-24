@@ -6,6 +6,7 @@ local_settings.py
 /env/
 /build/
 /dist/
+/docs/_build/
 coverage/
 .coverage
 *.egg-info
