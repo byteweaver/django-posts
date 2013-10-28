@@ -26,6 +26,7 @@ setup(
         'django-nose',
         'coverage',
         'django-coverage',
+        'faker',
     ],
     test_suite='posts.tests.runtests.runtests',
 )

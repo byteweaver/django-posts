@@ -2,3 +2,4 @@ django>=1.5.1
 django-nose
 coverage
 django-coverage
+faker
