@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth import get_user_model
 
-from models import Post
+from posts.models import Post
 
 
 class AbstractPostAdmin(admin.ModelAdmin):

@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 
-from views import PostListView, PostDetailView
+from posts.views import PostListView, PostDetailView
 
 
 urlpatterns = patterns('',
