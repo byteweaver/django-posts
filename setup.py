@@ -13,8 +13,8 @@ setup(
     description='A generic posts app for django',
     long_description=read('README.md'),
     license='MIT License',
-    author='noxan',
-    author_email='contact@byteweaver.net',
+    author='Richard Stromer'
+    author_email='richard.stromer@byteweaver.org',
     url='https://github.com/byteweaver/django-posts',
     packages=find_packages(),
     include_package_data=True,
