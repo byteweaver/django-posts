@@ -1,7 +1,7 @@
 {% block content %}
 {% for post in post_list %}
 <div>
-    <h1>{{post.headline}}</h1>
+    <a href="{% url 'posts:detail' post.id %}"><h1>{{post.headline}}</h1></a>
     {{post.text|linebreaks}}
 </div>
 {% endfor %}
