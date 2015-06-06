@@ -30,7 +30,7 @@ Hook this app into your ``urls.py``:
 
     urlpatterns = patterns('',
         ...
-        url(r'^your-url/$', include('posts.urls')),
+        url(r'^posts/', include('posts.urls', namespace='posts')),
         ...
     )
 
