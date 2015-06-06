@@ -40,3 +40,7 @@ The last upgrade, as starting with version 0.2.x, is incompatible with all versi
 
 - version 0.2.x requires Django 1.5
 - all versions below run with Django1.4 (and maybe below, not tested)
+
+### Version 0.3
+
+- update app to work with python3 and django1.8
