@@ -34,6 +34,16 @@ Hook this app into your ``urls.py``:
         ...
     )
 
+## Testing
+
+You require `tox` in order to run the unittests of this project:
+
+    pip install tox
+
+Then just run tox in the project's folder:
+
+    $ tox
+
 ## Versions
 
 The last upgrade, as starting with version 0.2.x, is incompatible with all versions below and does no longer feature south support!
