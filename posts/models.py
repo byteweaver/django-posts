@@ -5,7 +5,11 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class AbstractPost(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, editable=False, related_name="%(app_label)s_%(class)s")
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        editable=False,
+        related_name="%(app_label)s_%(class)s"
+    )
     headline = models.CharField(_("Headline"), max_length=255)
     text = models.TextField(_("Text"))
     creation_date = models.DateTimeField(_("Creation Date"), auto_now_add=True)
