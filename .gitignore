@@ -10,3 +10,7 @@ coverage/
 .coverage
 *.egg-info
 *.egg
+*.eggs
+
+# testing
+/.tox/
