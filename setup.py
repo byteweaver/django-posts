@@ -21,5 +21,4 @@ setup(
     install_requires=[
         'Django',
     ],
-    test_suite='posts.tests.runtests.runtests',
 )
