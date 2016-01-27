@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from posts.tests.factories import PostFactory
+from posts.factories import PostFactory
 
 
 class PostTestCase(TestCase):

@@ -1,4 +1,4 @@
-from faker import Faker
+import factory
 
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
@@ -6,28 +6,23 @@ from django.template.defaultfilters import slugify
 from posts.models import Post
 
 
-faker = Faker()
+class UserFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model = User
 
-class UserFactory(object):
-    @classmethod
-    def create(self):
-        user = User()
-        user.username = faker.username()
-        user.email = faker.email()
-        user.set_password('123')
-        user.save()
-        return user
+    username = factory.Faker('first_name')
+    email = factory.Faker('email')
+    password = factory.PostGenerationMethodCall('set_password', '123')
 
 
-class PostFactory(object):
-    @classmethod
-    def create(self):
-        headline = ' '.join(faker.lorem().split(' ')[:4])
+class PostFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model = Post
 
-        post = Post()
-        post.author = UserFactory.create()
-        post.headline = headline
-        post.slug = slugify(headline)
-        post.text = faker.lorem()
-        post.save()
-        return post
+    author = factory.SubFactory(UserFactory)
+    text = factory.Faker('text')
+    headline = factory.Faker('sentence', nb_words=4, variable_nb_words=True)
+
+    @factory.lazy_attribute
+    def slug(self):
+        return slugify(self.headline)
