@@ -21,12 +21,5 @@ setup(
     install_requires=[
         'Django',
     ],
-    tests_require=[
-        'Django',
-        'django-nose',
-        'coverage',
-        'django-coverage',
-        'fake-factory',
-    ],
     test_suite='posts.tests.runtests.runtests',
 )
