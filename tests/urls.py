@@ -1,6 +1,6 @@
-from django.conf.urls.defaults import include, patterns, url
+from django.conf.urls.defaults import include, url
 
 
-urlpatterns = patterns('',
+urlpatterns = [
     url(r'^', include('posts.urls')),
-)
+]
